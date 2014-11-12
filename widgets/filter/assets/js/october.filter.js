@@ -201,7 +201,7 @@
 
         $scope.ocPopover({
             content: Mustache.render(self.getPopoverTemplate(), data),
-            modal: false,
+            modal: true,
             highlightModalTarget: true,
             closeOnPageClick: true,
             placement: 'bottom'
