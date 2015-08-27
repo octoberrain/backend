@@ -67,6 +67,9 @@
         if (this.options.autoInsertRows)
             handsontableOptions.minSpareRows = 1
 
+        if (this.options.height) {
+            handsontableOptions.height = this.options.height;
+        }
         /*
          * Data provided
          */
