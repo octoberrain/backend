@@ -61,6 +61,11 @@ class Grid extends WidgetBase
     protected $data;
 
     /**
+     * @var integer Height of the grid.
+     */
+    protected $height = 0;
+
+    /**
      * @var string HTML element that can [re]store the grid data, cannot use with data or useDataSource.
      */
     protected $dataLocker;
@@ -89,6 +94,7 @@ class Grid extends WidgetBase
         $this->dataLocker = $this->getConfig('dataLocker', $this->dataLocker);
         $this->useDataSource = $this->getConfig('useDataSource', $this->useDataSource);
         $this->monitorChanges = $this->getConfig('monitorChanges', $this->monitorChanges);
+        $this->height = $this->getConfig('height', $this->height);
     }
 
     /**
@@ -118,6 +124,7 @@ class Grid extends WidgetBase
         $this->vars['dataLocker'] = $this->dataLocker;
         $this->vars['useDataSource'] = $this->useDataSource;
         $this->vars['monitorChanges'] = $this->monitorChanges;
+        $this->vars['height'] = $this->height;
     }
 
     protected function makeToolbarWidget()
